@@ -1,0 +1,12 @@
+---
+packages:
+  aalib-libs:
+  abattis-cantarell-fonts:
+  vim-common:
+  vim-enhanced:
+  vim-filesystem:
+  vim-minimal:
+  foobar:
+
+blacklist:
+  emacs:
