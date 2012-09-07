@@ -63,6 +63,31 @@ The idea behind this experiment is to have two files:
   - the file's name should reflect its overall version, such as `Fedora17.yaml`
 * A yaml file that contains a list of packages to actually install
 
+The canonical package versions file looks like this at the moment:
+
+```yaml
+---
+packages:
+  foo: 1.2.3-5
+  bar: 0.1-7
+  baz: 3.1.7-5.whatever
+```
+
+The package list looks like:
+
+```yaml
+---
+packages:
+  foo:
+  bar:
+```
+
+The logic with the above two files goes something like:
+
+* If package X is installed, it must be the authorized version (1st file)
+* Use the 2nd file to specify whether a package is installed
+
+The resulting output looks something like this with my `demo.rb` script:
 
 ```puppet
   package {'aalib-libs':
