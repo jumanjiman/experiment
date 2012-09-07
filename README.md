@@ -57,6 +57,13 @@ to create the resources. This is just to explore a simpler
 data structure than hiera or the
 [`create_resources`](http://docs.puppetlabs.com/references/latest/function.html#createresources) built-in function.
 
+The idea behind this experiment is to have two files:
+
+* A yaml file that contains canonical versions of authorized packages
+  - the file's name should reflect its overall version, such as `Fedora17.yaml`
+* A yaml file that contains a list of packages to actually install
+
+
 ```puppet
   package {'aalib-libs':
     ensure => '1.4.0-0.20.rc5.fc17',
